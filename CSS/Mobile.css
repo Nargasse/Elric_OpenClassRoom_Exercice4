@@ -1,0 +1,12 @@
+header, footer {
+    background-color: darkgray;
+}
+
+.flex {
+    display: flex;
+}
+
+a:hover, a {
+    text-decoration: none;
+    color: inherit;
+}

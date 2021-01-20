@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Site de commande en ligne">
+        <title>Orinoco</title>
+        <!-- <link rel="icon" type="img/png" href=""> -->
+        <link rel="stylesheet" href="./CSS/Mobile.css">
+        <script type="text/javascript" src="JS/produitDisplay.js" defer></script>
+
+    </head>
+
+    <body>
+
+        <header class="flex-unwrapper">
+            <p>Orinoco</p>
+            <div role="search">
+                <input type="text" placeholder="zone de recherche">
+            </div>
+            <div class=flex role="complementary">
+                <p>Connexion</p>
+                <p>Mon panier</p>
+            </div>
+        </header>
+
+        <main>
+            <div role="banner">
+                <h1>Nos ours en peluches faits à la main</h1>
+            </div>
+
+            <section id="liste-articles">
+
+            </section>
+            
+            <section role=form>
+                <label for="variante-select">
+                    Selectionnez une option de couleur :
+                </label>
+                <select name="option" id="variante-select">
+                    
+                </select>
+                <button>Commande</button>
+            </section>
+            
+        </main>
+
+        <footer>
+            <ul role="contentinfo">
+                <li>Contact</li>
+                <li>Mentions légales</li>
+                <li>Charte de confidentialité</li>
+            </ul>
+        </footer>
+
+    </body>
+</html>
