@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Site de commande en ligne">
+        <title>Orinoco</title>
+        <!-- <link rel="icon" type="img/png" href=""> -->
+        <link rel="stylesheet" href="./CSS/Mobile.css">
+        <script type="text/javascript" src="JS/basket.js" defer></script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <a href="index.html"><img src="Images/Logo.png" alt="logo Oricnoco, chariot de supermarché en dégradé de orange à violet"></a>
+            <nav>
+                <div role="search">
+                    <input type="text" id="recherche" class="clickable-theme-shadow" placeholder="zone de recherche">
+                </div>
+                <div class="boutons flex-around" role="complementary">
+                    <a href="#" class="clickable-theme-shadow">Connexion</a>
+                    <a href="Panier.html" class="clickable-theme-shadow">Mon panier (<span class="nombre-element-panier"></span>)</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-wrapper">
+            <form class="text-align">
+                <h1>A quelques clics d'une nouvelle acquisition !</h1>
+                <p>Remplissez simplement le formulaire.</p>
+                <label for="firstName">Nom : </label>
+                <input type="text" required="true" name="firstName" id="firstName" maxlength="60" placeholder="ex : Maurice"><br>
+                <label for="lastName">Prénom : </label>
+                <input type="text" required="true" name="lastName" id="lastName" maxlength="100" placeholder="ex : Dupont"><br>
+                <label for="adresse">Adresse : </label>
+                <input type="text" required="true" name="address" id="address" maxlength="200" placeholder="ex : 24 rue des champs"><br>
+                <label for="codePostal">Code postal : </label>
+                <input type="text" name="codePostal" id="codePostal" maxlength="20" placeholder="ex : 92500"><br>
+                <label for="city">Ville : </label>
+                <input type="texte" required="true" name="city" id="city" maxlength="140" placeholder="ex : Gentilly sous collines"><br>
+                <label for="email">Mail : </label>
+                <input type="email" required="true" name="email" id="email" maxlength="60" placeholder="ex : maurice.dupont@mailo.fr"><br>
+                <button id="bouton-achat" class="clickable-theme-shadow">Achat</button>
+            </form>
+
+            <div class="text-align">
+            <table>
+                    <caption>Votre panier :</caption>
+                    <thead>
+                        <tr>
+                            <td>Produit</td>
+                            <td>Quantité</td>
+                            <td>Prix</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <button id="vide-panier" class="clickable-theme-shadow">Vider le panier</button>
+            </div>
+        </main>
+ 
+        <footer>
+            <ul role="contentinfo">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mail:Orinoco@service.client.com">Charte de confidentialité</a></li>
+            </ul>
+        </footer>
+
+    </body>
+
+</html>

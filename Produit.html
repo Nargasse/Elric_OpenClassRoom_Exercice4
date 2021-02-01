@@ -13,15 +13,17 @@
 
     <body>
 
-        <header class="flex-unwrapper">
-            <p>Orinoco</p>
-            <div role="search">
-                <input type="text" placeholder="zone de recherche">
-            </div>
-            <div class=flex role="complementary">
-                <p>Connexion</p>
-                <p>Mon panier</p>
-            </div>
+        <header>
+            <a href="index.html"><img src="Images/Logo.png" alt="logo Oricnoco, chariot de supermarché en dégradé de orange à violet"></a>
+            <nav>
+                <div role="search">
+                    <input type="text" id="recherche" class="clickable-theme-shadow" placeholder="zone de recherche">
+                </div>
+                <div class="boutons flex-around" role="complementary">
+                    <a href="#" class="clickable-theme-shadow">Connexion</a>
+                    <a href="Panier.html" class="clickable-theme-shadow">Mon panier (<span class="nombre-element-panier"></span>)</a>
+                </div>
+            </nav>
         </header>
 
         <main>
@@ -33,23 +35,26 @@
 
             </section>
             
-            <section role=form>
+            <section class="text-align" role=form>
                 <label for="variante-select">
                     Selectionnez une option de couleur :
                 </label>
                 <select name="option" id="variante-select">
-                    
                 </select>
-                <button>Commande</button>
+                <div class="boutons flex-around">
+                <button class="clickable-theme-shadow" id="bouton-commande">Ajouter au panier</button>
+                <button class="clickable-theme-shadow" id="bouton-panier">Accéder au panier</button>
+                </div>
+                <p>Vous avez <span class="nombre-element-panier"></span> elements dans votre panier.</p>
             </section>
             
         </main>
 
         <footer>
             <ul role="contentinfo">
-                <li>Contact</li>
-                <li>Mentions légales</li>
-                <li>Charte de confidentialité</li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mail:Orinoco@service.client.com">Charte de confidentialité</a></li>
             </ul>
         </footer>
 

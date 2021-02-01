@@ -1,12 +1,146 @@
-header, footer {
-    background-color: darkgray;
-}
-
-.flex {
-    display: flex;
-}
-
 a:hover, a {
     text-decoration: none;
     color: inherit;
+    outline: 0px;
+}
+
+body {
+    margin: 0;
+    background-color: #EEE0EF;
+}
+
+header {
+    background-color: #F3E9F1;
+    padding-bottom: 5px;
+}
+
+header img {
+    max-width: 100%;
+    /*
+    display: block;
+    margin: auto;
+    */
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boutons {
+    height: 2em;
+    line-height: 2em;
+}
+
+.header-boutons a {
+    width: 40%;
+    text-align: center;
+}
+
+#recherche {
+    width: 90%;
+    display: block;
+    margin: auto;
+    background-color: #fcf9fb;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+main img {
+    object-fit: cover;
+    width: 60vw;
+    height: 40vh;
+    max-width: 70vh;
+    border: solid 1px;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+h1 + p {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5em;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 0px;
+}
+
+article {
+    text-align: center;
+    margin: 1em;
+    padding: 1em 0.2em;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.text-align select {
+    display: block;
+    margin: 1em auto;
+}
+
+footer {
+    background-color: #E5CCE7;
+    padding: 0.3em;
+}
+
+.clickable-theme-shadow {
+    border-width: 2px;
+    border-style: ridge;
+    border-color: #F3E9F1 #975FE9 #975FE9 #F3E9F1;
+    box-shadow: 7px 5px 4px -2px rgba(151, 95, 233, 0.2);
+    background: linear-gradient(167deg, rgba(243,233,241,1) 55%, rgba(219,132,43,1) 81%, rgba(151,95,233,1) 94%);
+    margin: 0.3em;
+}
+    
+.clickable-theme-shadow:hover, .clickable-theme-shadow:focus {
+    border: ridge 2px;
+    border-color: #DB842B #975FE9 #975FE9 #DB842B;
+    box-shadow: 4px 2px 2px 0px rgba(219, 132, 43, 0.2) inset, 7px 5px 4px -2px rgba(151, 95, 233, 0.2);
+    margin: 0.3em;
+}
+
+table caption {
+    font-size: 1.4em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border : 1px solid black;
+    text-align: center;
+}
+
+thead {
+    background-color: #a373ec9f;
+}
+
+tbody {
+    background-color: #db832b4b;
+}
+
+
+@media all and (min-width: 800px) {
+    header img {
+        display: block;
+        margin: auto;
+    }
+
+    .flex-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
