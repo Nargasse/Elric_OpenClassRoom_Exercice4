@@ -16,22 +16,12 @@ if (/\.html\?[\w]{1,100}/.test(window.location.href)) {
 }
 
 nombreElementPanier ();
+boutonPanier();
 
-(function boutonPanier() { //On attache un lien au bouton accès panier
+function boutonPanier() { //On attache un lien au bouton accès panier
     document.getElementById("bouton-panier").addEventListener("click", function () {
         window.location.href = "Panier.html";
     })
-} ())
-
-function nombreElementPanier () { //Affiche le nombre d'articles actuellement dans le panier
-    let x = 0;
-    while(localStorage.getItem("contenuPanier" + x)) {
-        x += 1;
-    }
-    let spans = document.getElementsByClassName("nombre-element-panier");
-    for (let span of spans) {
-        node.innerText = x;
-    }
 }
 
 function demandeFicheAPI (urlArgument) {
@@ -62,7 +52,7 @@ function echec() { //Est appellé si la demande serveur se passe mal.
 function ecrireFicheArticle(article) {
     //On créer un <a> qui va englober toute la fiche d'un article.
     const nouvelArticle = document.createElement("Article");
-    nouvelArticle.setAttribute("class", "clickable-theme-shadow");
+    nouvelArticle.setAttribute("class", "box-clickable");
     document.getElementById("liste-articles").appendChild(nouvelArticle);
 
     //On prépare l'élément titre
@@ -79,7 +69,7 @@ function ecrireFicheArticle(article) {
 
     //On prépare l'élément prix
     const prix = document.createElement("button");
-    prix.setAttribute("class", "clickable-theme-shadow");
+    prix.setAttribute("class", "box-clickable");
     prix.innerText = article.price/100 + "€";
 
     //On insère le tout sur la nouvelle section

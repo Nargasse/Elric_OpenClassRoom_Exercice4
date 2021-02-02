@@ -1,5 +1,4 @@
 nombreElementPanier ();
-
 //On fait appel à la fonction demande liste qui ouvre la demande serveur sous forme de promesse
 demandeListe()
 .then(function(listeTeddies) {
@@ -21,7 +20,7 @@ function nombreElementPanier () { //Affiche le nombre d'articles actuellement da
     }
     let spans = document.getElementsByClassName("nombre-element-panier");
     for (let span of spans) {
-        node.innerText = x;
+        span.innerText = x;
     }
 }
 
@@ -38,7 +37,6 @@ function demandeListe () {
         }
         demandeListeArticles.send();
     })
-    
 };
 
 function ecrireListeArticles(listeArticles) {
@@ -62,13 +60,13 @@ function ecrireListeArticles(listeArticles) {
 
         //On prépare l'élément prix
         const prix = document.createElement("button");
-        prix.setAttribute("class", "clickable-theme-shadow");
+        prix.setAttribute("class", "box-clickable");
         prix.innerText = article.price/100 + "€";
 
         //On insère le <a> dans un <article> (pour améliorer la sémantique HTML) avant de l'insérer dans le DOM
         const nouvelArticle = document.createElement("article");
         nouvelArticle.appendChild(lienContenant);
-        nouvelArticle.setAttribute("class", "clickable-theme-shadow");
+        nouvelArticle.setAttribute("class", "box-clickable");
         ouMontrerLesArticles.appendChild(nouvelArticle);
         
         //On insère le tout sur la nouvelle section
@@ -85,16 +83,5 @@ function ecrireListeArticles(listeArticles) {
         lienContenant = nouvelleDiv;
         lienContenant.appendChild(description);
         lienContenant.appendChild(prix);
-    }
-}
-
-function nombreElementPanier () { //Affiche le nombre d'articles actuellement dans le panier
-    let x = 0;
-    while(localStorage.getItem("contenuPanier" + x)) {
-        x += 1;
-    }
-    let spans = document.getElementsByClassName("nombre-element-panier");
-    for (let span of spans) {
-        span.innerText = x;
     }
 }
