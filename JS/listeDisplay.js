@@ -25,6 +25,7 @@ function nombreElementPanier () { //Affiche le nombre d'articles actuellement da
 }
 
 function demandeListe () {
+    //Renvoie une promesse qui sera résolu plus tard avec la réponse du serveur ou une erreur.
     return new Promise (function(resolve, reject) {
         let demandeListeArticles = new XMLHttpRequest();
         demandeListeArticles.open("GET", "http://localhost:3000/api/teddies/", true);
@@ -72,6 +73,7 @@ function ecrireListeArticles(listeArticles) {
         //On insère le tout sur la nouvelle section
         lienContenant.appendChild(title);
 
+        //On créer deux divs supplémentaires pour le styling CSS.
         let nouvelleDiv = document.createElement("div");
         nouvelleDiv.setAttribute("class", "flex-around");
         lienContenant.appendChild(nouvelleDiv);
